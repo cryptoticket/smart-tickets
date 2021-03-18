@@ -1,0 +1,97 @@
+{
+  "name": "cryptotickets-smart-contracts",
+  "version": "1.0.0",
+  "dependencies": {
+    "babel-eslint": "^10.0.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "bignumber.js": "^8.0.2",
+    "bluebird": "^3.5.3",
+    "bs58": "^4.0.1",
+    "ethereumjs-tx": "^1.3.4",
+    "jsonwebtoken": "^8.2.2",
+    "openzeppelin-solidity": "^2.1.2",
+    "solc": "^0.5.3",
+    "systeminformation": "^4.26.4",
+    "truffle": "^5.0.3",
+    "truffle-hdwallet-provider": "^1.0.5",
+    "url": "^0.11.0",
+    "web3": "^1.2.8",
+    "web3-utils": "^1.2.8",
+    "winston": "^3.2.1"
+  },
+  "scripts": {
+    "commit": "./node_modules/.bin/git-cz",
+    "compile": "./node_modules/.bin/truffle compile",
+    "test:contracts": "./scripts/run-tests.sh",
+    "test": "npm run test:contracts",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "gas-estimate": "node scripts/gas_costs/gas-estimate.js",
+    "gas-get-abi-size": "./scripts/gas_costs/get_abi_size.sh",
+    "lint:all": "npm run lint:sol",
+    "lint:sol": "npx solium -d .",
+    "lint:sol:fix": "npx solium -d . --fix",
+    "coverage": "scripts/run-coverage.sh",
+    "make-badges": "npm run coverage && node scripts/make-test-badges.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:all",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS -g './commitlint.js'"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "commitizen.js"
+    }
+  },
+  "author": "crypto.tickets dev team",
+  "devDependencies": {
+    "@olavoparno/jest-badges-readme": "^1.5.1",
+    "apidoc": "^0.17.7",
+    "apidoc-markdown": "^0.2.1",
+    "@commitlint/cli": "^7.2.1",
+    "commitizen": "^3.0.5",
+    "cz-customizable": "^5.3.0",
+    "husky": "^1.2.1",
+    "memory-cache": "^0.2.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^3.0.0",
+    "conventional-changelog": "^3.1.8",
+    "coveralls": "^3.1.0",
+    "ganache-cli": "^6.2.3",
+    "eslint-config-airbnb": "^18.1.0",
+    "eth-gas-reporter": "^0.2.0",
+    "solium": "^1.1.8",
+    "git-cz": "^3.0.1",
+    "jest-coverage-badges": "^1.1.2",
+    "mocha": "^5.2.0",
+    "mock-require": "^3.0.2",
+    "eslint": "^6.8.0",
+    "solidity-coverage": "^0.7.9",
+    "supertest": "^3.3.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-babel": "^5.2.1",
+    "eslint-plugin-flowtype": "^2.50.3",
+    "eslint-plugin-jest": "^21.24.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.14.3"
+  },
+  "jest": {
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ]
+  }
+}

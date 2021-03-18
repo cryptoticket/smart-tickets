@@ -1,0 +1,11 @@
+.idea/
+/config.json
+/node_modules
+/yarn.lock
+/log/*
+!/log/.gitkeep
+
+# ignore all docs except api md file
+docs/*
+!docs/.gitkeep
+!docs/README.md
