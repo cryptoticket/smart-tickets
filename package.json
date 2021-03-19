@@ -1,5 +1,5 @@
 {
-  "name": "cryptotickets-smart-contracts",
+  "name": "@crypto-tickets/basic-smart-contracts",
   "version": "1.0.0",
   "dependencies": {
     "babel-eslint": "^10.0.3",
@@ -48,7 +48,16 @@
       "config": "commitizen.js"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cryptoticket/smart-tickets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cryptoticket/smart-tickets/issues"
+  },
+  "homepage": "https://crypto.tickets",
   "author": "crypto.tickets dev team",
+  "license": "MIT",
   "devDependencies": {
     "@olavoparno/jest-badges-readme": "^1.5.1",
     "apidoc": "^0.17.7",
