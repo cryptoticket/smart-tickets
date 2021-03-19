@@ -1,5 +1,7 @@
 # crypto.tickets smart tickets
 
+[![NPM](https://nodei.co/npm/@crypto-tickets/basic-smart-contracts.png?compact=true)](https://npmjs.org/package/@crypto-tickets/basic-smart-contracts)
+
 This project is used as a base for crypto.tickets blockchain network. 
 You can use these contracts to "decode" crypto.tickets blockchain data or as an example.
 
